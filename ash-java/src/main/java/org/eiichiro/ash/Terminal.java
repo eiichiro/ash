@@ -15,6 +15,8 @@
  */
 package org.eiichiro.ash;
 
+import jline.TerminalFactory;
+
 /**
  * {@code Terminal}
  * 
@@ -22,6 +24,6 @@ package org.eiichiro.ash;
  */
 public class Terminal {
 
-	public static int width = 74;
+	public static int width = TerminalFactory.get().getWidth();
 	
 }
