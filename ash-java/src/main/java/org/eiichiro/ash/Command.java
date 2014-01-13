@@ -44,6 +44,6 @@ public interface Command {
 	 * 
 	 * @param line Command line input.
 	 */
-	public void run(Line line);
+	public void run(Line line) throws Exception;
 	
 }
