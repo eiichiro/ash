@@ -33,7 +33,7 @@ import com.google.common.base.Preconditions;
 /**
  * {@code Shell} is the shell object provided by Ash.
  * 
- * @author <a href="mailto:eiichiro@eiichiro.org">Eiichiro Uchiumi</a>
+ * @author <a href="mailto:mail@eiichiro.org">Eiichiro Uchiumi</a>
  */
 public class Shell {
 

@@ -29,7 +29,7 @@ import com.google.common.base.Preconditions;
 /**
  * {@code Usage} represents a command usage.
  * 
- * @author <a href="mailto:eiichiro@eiichiro.org">Eiichiro Uchiumi</a>
+ * @author <a href="mailto:mail@eiichiro.org">Eiichiro Uchiumi</a>
  */
 public class Usage {
 

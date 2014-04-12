@@ -23,7 +23,7 @@ import java.util.Map;
 /**
  * {@code Line} represents a command line.
  * 
- * @author <a href="mailto:eiichiro@eiichiro.org">Eiichiro Uchiumi</a>
+ * @author <a href="mailto:mail@eiichiro.org">Eiichiro Uchiumi</a>
  */
 public class Line {
 

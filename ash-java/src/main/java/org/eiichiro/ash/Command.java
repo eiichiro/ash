@@ -21,7 +21,7 @@ package org.eiichiro.ash;
  * register a command instance into the shell with its command name via 
  * {@code Shell#register} method.
  * 
- * @author <a href="mailto:eiichiro@eiichiro.org">Eiichiro Uchiumi</a>
+ * @author <a href="mailto:mail@eiichiro.org">Eiichiro Uchiumi</a>
  */
 public interface Command {
 
