@@ -49,6 +49,10 @@ public class Console {
 		Preconditions.checkArgument(prompt != null && !prompt.isEmpty(), "Parameter 'prompt' must not be [" + prompt + "]");
 		reader.setPrompt(prompt);
 	}
+
+	public String prompt() {
+		return reader.getPrompt();
+	}
 	
 	public String readLine() {
 		try {
