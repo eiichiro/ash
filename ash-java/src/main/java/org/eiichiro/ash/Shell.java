@@ -200,6 +200,10 @@ public class Shell {
 		repl.set(false);
 	}
 
+	public boolean started() {
+		return repl.get();
+	}
+
 	/**
 	 * @return the console
 	 */
