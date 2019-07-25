@@ -129,12 +129,11 @@ public class Shell {
 			opts = new Options();
 			
 			for (Usage.Option option : usage.options()) {
-				Option opt = new Option(option.opt(), option.longOpt(), false, option.description());
-				opt.setRequired(option.required());
 				String arg = option.arg();
-				
-				if (arg == null || arg.isEmpty()) {
-					opt.setArgs(1);
+				Option opt = new Option(option.opt(), option.longOpt(), arg != null && !arg.isEmpty(), option.description());
+				opt.setRequired(option.required());
+
+				if (opt.hasArg()) {
 					opt.setArgName(arg);
 				}
 				
