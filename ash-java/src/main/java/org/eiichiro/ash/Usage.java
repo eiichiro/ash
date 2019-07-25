@@ -233,7 +233,8 @@ public class Usage {
 		private final String arg;
 		
 		private Option(String opt, String longOpt, boolean required, String description, String arg) {
-			Preconditions.checkArgument(!(opt == null || opt.isEmpty()), "Parameter 'opt' must not be [" + opt + "]");
+			Preconditions.checkArgument(!(opt == null || opt.isEmpty()) && !(longOpt == null || longOpt.isEmpty()),
+					"Parameter 'opt' or 'longOpt' must not be blank");
 			this.opt = opt;
 			this.longOpt = longOpt;
 			this.required = required;
