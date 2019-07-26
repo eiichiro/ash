@@ -39,7 +39,15 @@ public class Usage {
 
 		@Override
 		public int compare(Option o1, Option o2) {
-			return o1.opt.compareTo(o2.opt);
+			if ((o1.opt == null || o1.opt.isEmpty()) && (o2.opt == null || o2.opt.isEmpty())) {
+				return o1.longOpt.compareTo(o2.longOpt);
+			} else if ((o1.opt == null || o1.opt.isEmpty()) && (o2.opt != null && !o2.opt.isEmpty())) {
+				return 1;
+			} else if ((o1.opt != null && !o1.opt.isEmpty()) && (o2.opt == null || o2.opt.isEmpty())) {
+				return -1;
+			} else {
+				return o1.opt.compareTo(o2.opt);
+			}
 		}
 		
 	});
@@ -233,7 +241,7 @@ public class Usage {
 		private final String arg;
 		
 		private Option(String opt, String longOpt, boolean required, String description, String arg) {
-			Preconditions.checkArgument(!(opt == null || opt.isEmpty()) && !(longOpt == null || longOpt.isEmpty()),
+			Preconditions.checkArgument((opt != null && !opt.isEmpty()) || (longOpt != null && !longOpt.isEmpty()),
 					"Parameter 'opt' or 'longOpt' must not be blank");
 			this.opt = opt;
 			this.longOpt = longOpt;
