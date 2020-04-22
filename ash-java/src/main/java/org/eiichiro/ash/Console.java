@@ -31,6 +31,7 @@ public class Console {
 	public void print(String string) {
 		try {
 			reader.print(string);
+			reader.flush();
 		} catch (IOException e) {
 			throw new UncheckedException(e);
 		}
