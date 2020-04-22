@@ -33,7 +33,7 @@ import com.google.common.base.Preconditions;
  */
 public class Usage {
 
-	private final String syntax;
+	private final String synopsis;
 	
 	private Set<Option> options = new TreeSet<>(new Comparator<Option>() {
 
@@ -55,19 +55,19 @@ public class Usage {
 	/**
 	 * Constructs a new {@code Usage} with the specified command syntax.
 	 * 
-	 * @param syntax Command syntax.
+	 * @param synopsis Command synopsis.
 	 */
-	public Usage(String syntax) {
-		this.syntax = syntax;
+	public Usage(String synopsis) {
+		this.synopsis = synopsis;
 	}
 	
 	/**
-	 * Returns the command syntax.
+	 * Returns the command synopsis.
 	 * 
-	 * @return The command syntax.
+	 * @return The command synopsis.
 	 */
-	public String syntax() {
-		return syntax;
+	public String synopsis() {
+		return synopsis;
 	}
 	
 	public Set<Option> options() {
@@ -103,8 +103,8 @@ public class Usage {
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
 		String usage = "usage: ";
-		String string = usage + syntax;
-		int tab = usage.length() + syntax.indexOf(" ") + 1;
+		String string = usage + synopsis;
+		int tab = usage.length() + synopsis.indexOf(" ") + 1;
 		String padding = StringUtils.leftPad("", tab);
 		int pos = wrap(string, 0);
 		boolean end = false;
